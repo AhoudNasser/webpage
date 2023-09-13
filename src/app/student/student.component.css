@@ -1,0 +1,54 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #f0f0f0;
+  }
+
+  .text-danger {
+    color: red;
+  }
+  
+  .text-success {
+    color: green;
+  }
+
+  .red-text {
+    color: red;
+  }
+  
+  .green-text {
+    color: green;
+  }
+
+  .pass-badge {
+    background-color: green;
+    color: white;
+    padding: 5px;
+    /* border-radius: 5px; */
+  }
+  
+  .fail-badge {
+    background-color: red;
+    color: white;
+    padding: 5px;
+    /* border-radius: 5px; */
+  }
+
+  .centered-div {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    font-size: xx-large; 
+    /* Center vertically */
+    /* min-height: 100vh; Ensure the div takes the full viewport height */
+  }

@@ -1,0 +1,84 @@
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<!-- Section: Design Block -->
+<section class="background-radial-gradient overflow-hidden">
+    <style>
+      .background-radial-gradient {
+        background-color: white;
+        
+      }
+  
+      
+      .bg-glass {
+        background-color: hsla(0, 0%, 100%, 0.9) !important;
+        backdrop-filter: saturate(200%) blur(25px);
+      }
+  
+      .borderless-button {
+              background-color: #007bff; /* Button background color */
+              color: #fff; /* Button text color */
+              border: none; /* Remove the border */
+              padding: 10px 20px; /* Button padding */
+              border-radius: 5px; /* Optional border radius */
+              cursor: pointer;
+          }
+  
+      .custom-blue-button {
+      background-color: #bad4f0; /* Blue color */
+      color: #033ebf; /* White text color */
+      /* Add other styling properties as needed */
+  }
+  
+    </style>
+  
+  
+<div [ngStyle]="{'background-color': isHighlighted ? 'yellow' : 'white'}">
+    <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+      <div class="row gx-lg-5 align-items-center mb-5">
+        <div  ng-app="" class="col-lg-6 mb-5 mb-lg-0" style="z-index: 10">
+          <h1 class="my-5 display-5 fw-bold ls-tight" style="color: black; font-size: 60px;">
+            Welcom to <span style="color: blue">Our_School.</span><p>Enjoy Browsing.</p>
+          </h1>
+          <!-- <p class="mb-4 opacity-70" style="color: hsl(223, 5%, 26%); font-size: 20px;">
+            Please Enter Your Name: </p>
+            <input type="text" ng-model="name" placeholder="Enter name here">
+            <h1>Hello {{name}}</h1> -->
+            <div class="card-body">
+                <h4 class="card-title">Please Enter Your <span style="color: red;">{{ details }}</span></h4>
+                <p class="card-text"><input type="text" (input)="onStudentNameChange($event)"
+                        placeholder="Enter your name "></p>
+                <h5 *ngIf="studentName" class="card-title">Hello Mrs. <span style="color: red;">{{
+                        studentName }}</span></h5>
+            
+            </div>
+          
+  
+       
+        <br>
+        <button type="button" class="btn btn-primary btn-lg m-2" routerLink='/student' >Go to student mark</button>
+        
+        </div>
+  
+        <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+          <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+          <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+          <img src="assets\imges\student.png" >
+          <div class="card bg-glass">
+         
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>>
+  </section>
+
+
+
+
+
+
+
+<!-- <div id="div" [ngStyle]="styleOne && {'background-color': 'red'} || styleTwo && {'background-color': 'blue'}"></div> -->
+

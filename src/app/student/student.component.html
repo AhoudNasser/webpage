@@ -1,0 +1,27 @@
+<div class="centered-div" [ngStyle]="{'background-color': isHighlighted ? 'gray' : 'white'}"> Student Details Table :
+</div>
+
+<table class="table table-striped" [ngStyle]="getStyle">
+        <thead>
+          <tr>
+            <th scope="col">NO.</th>
+            <th scope="col">NAME </th>
+            <th scope="col">EMAIL</th>
+            <th scope="col">MARKS &nbsp; [out of 100] </th>
+            <th scope="col">PASS/ &nbsp; FAIL [out of 100] </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let student of students" >
+            <th scope="row">{{student.number}}</th>
+            <td>{{student.name}} </td>
+            <td>{{student.email}}</td>
+            <td [ngClass]="getMarkColor(student.Mark)">{{student.Mark}}</td>
+            <td>
+                <span *ngIf="student.Mark >= 50" class="pass-badge">PASS</span>
+                <span *ngIf="student.Mark < 50" class="fail-badge">FAIL</span>
+              </td>
+          </tr>
+          
+        </tbody>
+      </table>
